@@ -104,11 +104,13 @@
   border-radius: 5px;
 }
 
-.locations-container {
+.locations-header-container {
   text-align: center;
-  padding: 4% 30%;
+  align-content: center;
+  padding: 3.5% 30%;
+  margin-top: 10px;
   background-color: #fafafa;
-  height: 200px;
+  height: 175px;
   line-height: 1.2em;
 }
 
@@ -116,8 +118,20 @@
   color: #6e6e6e;
 }
 
-.locations-paragraph {
+.locations-paragraph-text {
   color: #6e6e6e;
   font-size: 12px;
   line-height: 1.8em;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fafafa;
+  padding: 0 20%;
 }
