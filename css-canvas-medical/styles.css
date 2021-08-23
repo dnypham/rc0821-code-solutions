@@ -1,0 +1,123 @@
+.avenir-font {
+  font-family: 'Avenir', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.tiempos-headline-font {
+  font-family: 'Tiempos Headline', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 65px;
+  padding: 0 7%;
+  border-bottom: thin solid #f7f7f8;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  padding: 20px 0;
+  width: 120px;
+}
+
+.navigation-links {
+  list-style: none;
+  font-size: 12px;
+}
+
+.navigation-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.navigation-links li a {
+  text-decoration: none;
+  color: #aeaeae;
+}
+
+.header button {
+  cursor: pointer;
+  height: 35px;
+  width: 85px;
+  background-color: #244464;
+  color: #eaedf0;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+}
+
+.banner {
+  padding: 5% 7%;
+}
+
+.banner-image-container {
+  height: 425px;
+  background-image: url(images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 25px 376px 50px 60px;
+  color: white;
+}
+
+.banner-header {
+  font-family: 'Tiempos Headline', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 1.4em;
+  padding-right: 30px;
+}
+
+.banner-paragraph {
+  line-height: 1.8em;
+  font-size: 12px;
+  margin-top: -15px;
+  margin-bottom: 25px;
+}
+
+.banner-button {
+  cursor: pointer;
+  height: 45px;
+  width: 150px;
+  background-color: #244464;
+  color: #f6f8f9;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.locations-container {
+  text-align: center;
+  padding: 4% 30%;
+  background-color: #fafafa;
+  height: 200px;
+  line-height: 1.2em;
+}
+
+.locations-header {
+  color: #6e6e6e;
+}
+
+.locations-paragraph {
+  color: #6e6e6e;
+  font-size: 12px;
+  line-height: 1.8em;
+}
