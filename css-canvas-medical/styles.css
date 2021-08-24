@@ -10,6 +10,10 @@
   font-weight: normal;
 }
 
+.border-bottom {
+  border-bottom: thin solid #f1f2f4;
+}
+
 .container {
   width: 100%;
 }
@@ -28,7 +32,7 @@
   align-items: center;
   height: 65px;
   padding: 0 7%;
-  border-bottom: thin solid #f7f7f8;
+  border-bottom: thin solid #f1f2f4;
 }
 
 .logo {
@@ -107,7 +111,7 @@
 .locations-header-container {
   text-align: center;
   align-content: center;
-  padding: 3.5% 30%;
+  padding: 3.5% 31%;
   margin-top: 10px;
   background-color: #fafafa;
   height: 175px;
@@ -134,4 +138,76 @@
   text-align: center;
   background-color: #fafafa;
   padding: 0 20%;
+  height: 200px;
+  line-height: 0.9em;
+}
+
+.locations p {
+  color: #787878;
+}
+
+.private-meeting-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5% 7%;
+  height: 140px;
+}
+
+.private-meeting-text {
+  line-height: 1.2em;
+}
+
+.private-meeting-text h2 {
+  color: #6e6e6e;
+  font-size: 24px;
+}
+
+.private-meeting-text p {
+  color: #6e6e6e;
+  font-size: 12px;
+}
+
+.private-meeting-button {
+  cursor: pointer;
+  height: 47px;
+  width: 165px;
+  background-color: #244464;
+  color: #dbe0e5;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #525351;
+  height: 350px;
+  padding: 8% 7%;
+}
+
+.logo-contact-info {
+  line-height: 4.5em;
+  margin-right: auto;
+}
+
+.logo-contact-info img {
+  width: 120px;
+}
+
+.logo-contact-info p {
+  color: #ededec;
+  font-size: 12px;
+  line-height: 0.8em;
+}
+
+.footer-links {
+  display: inline-block;
+  padding: 0 75px;
+}
+
+.footer-links p {
+  color: #ededec;
+  font-size: 16px;
 }
