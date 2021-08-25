@@ -11,27 +11,29 @@
 </head>
 <body>
   <div class="container">
-    <div class="row">
+    <header class="row">
       <div class="column-full">
-        <header class="header">
+        <div class="header">
           <img class="logo" src="images/logo-blue.svg" alt="Canvas logo">
-          <ul class="navigation-links avenir-font">
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Implementation</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Blog</a></li>
+          <ul class="header-navigation-bar avenir-font">
+            <li><a class="link-decoration" href="#">Product</a></li>
+            <li><a class="link-decoration" href="#">Implementation</a></li>
+            <li><a class="link-decoration" href="#">About Us</a></li>
+            <li><a class="link-decoration" href="#">Blog</a></li>
           </ul>
-          <button>Contact Us</button>
-        </header>
+          <button class="button-decoration">Contact Us</button>
+        </div>
       </div>
-    </div>
-    <div class="row">
+    </header>
+    <section class="row">
       <div class="column-full">
-        <section class="banner">
-          <div class="banner-image-container">
-            <div class="filter"></div>
-            <h2 class="banner-header tiempos-headline-font">The EMR Reimagined for Primary Care</h2>
-            <p class="banner-paragraph avenir-font">Can't remember the last time you talked with a patient without
+        <div class="banner">
+            <img class="banner-image" src="images/hero.jpg" alt="Woman smiling">
+            <h2 class="banner-h-text tiempos-headline-font">
+              The EMR Reimagined for Primary Care
+            </h2>
+            <p class="banner-p-text avenir-font">
+              Can't remember the last time you talked with a patient without
               focusing on the EMR? Canvas lets you rediscover joy in the work
               you do. Capture meaningful data, identify gaps in care, and move
               seamlessly between tasks within the platform. You stay present
@@ -39,74 +41,91 @@
               better doctor with Canvas, designed for primary care providers
               with the help of primary care providers.
             </p>
-            <button class="banner-button avenir-font">Get Started</button>
+            <button class="banner-button avenir-font button-decoration">
+              Get Started
+            </button>
           </div>
-        </section>
       </div>
-    </div>
-    <div class="row">
+    </section>
+    <section class="row">
       <div class="column-full">
-        <section class="locations-header-container">
-          <h2 class="locations-header tiempos-headline-font">Clinicians Prefer Canvas</h2>
-          <p class="locations-paragraph-text avenir-font">Physician-owned primary care
-            practices across the country have already made Canvas the fabric of
-            their care.
-          </p>
-        </section>
-      </div>
-    </div>
-    <div class="row border-bottom">
-      <div class="column-half">
-        <section class="locations avenir-font">
-          <p>Cascade Family Practice, Portland OR</p>
-          <p>Temescal Creek Medicine, Oakland CA</p>
-          <p>San Juan Healthcare, Friday Harbor WA</p>
-        </section>
-      </div>
-      <div class="column-half">
-        <section class="locations avenir-font">
-          <p>Ward Medical Clinic, Bonifay FL</p>
-          <p>Caribou Medical, Towanda PA</p>
-          <p>Bay Tree Family Care, Red Bay AL</p>
-        </section>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column-full">
-        <div class="private-meeting-container">
-          <div class="private-meeting-text">
-            <h2 class="tiempos-headline-font">Ready to learn more?</h2>
-            <p class="avenir-font">Schedule a private meeting now</p>
+        <div class="locations">
+          <div class="locations-text column-full text-align-center">
+            <h2 class="locations-h-text tiempos-headline-font">
+              Clinicians Prefer Canvas
+            </h2>
+            <p class="locations-p-text avenir-font">
+              Physician-owned primary care practices across the country have
+              already made Canvas the fabric of their care.
+            </p>
           </div>
-          <button class="private-meeting-button">Get Started</button>
+          <div class="column-full locations-list-text">
+            <ul class="locations-list avenir-font">
+              <li>Cascade Family Practice, Portland OR</li>
+              <li>Temescal Creek Medicine, Oakland CA</li>
+              <li>San Juan Healthcare, Friday Harbor W</li>
+            </ul>
+            <ul class="locations-list avenir-font locations-list-padding">
+              <li>Ward Medical Clinic, Bonifay FL</li>
+              <li>Caribou Medical, Towanda PA</li>
+              <li>Bay Tree Family Care, Red Bay AL</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
+    </section>
+    <footer class="footer row border-top">
       <div class="column-full">
-        <div class="footer-container">
-          <div class="logo-contact-info">
+        <div class="meeting">
+          <div class="meeting-text">
+            <h2 class="meeting-h-text tiempos-headline-font">
+              Ready to learn more?
+            </h2>
+            <p class="meeting-p-text avenir-font">
+              Schedule a private meeting now
+            </p>
+            </div>
+            <button class="meeting-button button-decoration">
+              Get Started
+            </button>
+        </div>
+      </div>
+      <div class="column-full">
+        <div class="footer-info">
+          <div class="footer-contact">
             <img src="images/logo-white.png" alt="Canvas logo">
             <p class="avenir-font">2307 Irving Street, Suite 228</p>
             <p class="avenir-font">San Francisco CA 94122</p>
             <p class="avenir-font">(800) 370-1416</p>
             <p class="avenir-font">info@canvasmedical.com</p>
           </div>
-          <div class="footer-links avenir-font">
-            <p>COMPANY</p>
-            <p>About Us</p>
-            <p>Blog</p>
+          <div class="company-product avenir-font">
+            <ul class="company-product-links">
+              <li>COMPANY</li>
+              <li><a class="link-decoration" href="#">About Us</a></li>
+              <li><a class="link-decoration" href="#">Blog</a></li>
+            </ul>
           </div>
-          <div class="footer-links avenir-font">
-            <p>PRODUCT</p>
-            <p>Product</p>
-            <p>Implementation</p>
-            <p>For Health Plans</p>
-            <p>Security</p>
+          <div class="company-product avenir-font">
+            <ul class="company-product-links">
+              <li>PRODUCT</li>
+              <li><a class="link-decoration" href="#">Product</a></li>
+              <li><a class="link-decoration" href="#">Implementation</a></li>
+              <li><a class="link-decoration" href="#">For Health Plans</a></li>
+              <li><a class="link-decoration" href="#">Security</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
+      <div class="column-full">
+        <div class="footer-navigation">
+          <ul class="footer-navigation-links avenir-font">
+            <li><a class="link-decoration" href="#">Privacy &amp; Terms</a></li>
+            <li><a class="link-decoration" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
