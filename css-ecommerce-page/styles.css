@@ -27,25 +27,32 @@ body {
 
 /* ----------CONTENT SECTION---------- */
 
-.items {
-  height: 400px;
-  background-color: lightcoral;
+.product-img-container {
+  height: 180px;
+  padding: 0 5px;
 }
 
-.column-one-fifth img {
+.product-img {
   width: 100%;
-  object-fit: fill;
-  padding: 0 5%;
+  height: 100%;
 }
 
-.column-one-fifth h2 {
+.product-brand-name {
   font-size: 8px;
 }
 
-.column-one-fifth p {
+.product-price {
   font-size: 8px;
 }
 
-.column-one-fifth p span {
-  background-color: #fef2e7;
+span {
+  color: #eaeaea;
+}
+
+mark {
+  background-color: #fef2e8;
+}
+
+del {
+  color: #eaeaea;
 }
