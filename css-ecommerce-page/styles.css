@@ -1,0 +1,58 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-one-fifth {
+  flex-basis: calc(100% / 5);
+}
+
+.header-text {
+  font-size: 18px;
+  text-align: center;
+}
+
+/* ----------CONTENT SECTION---------- */
+
+.product-img-container {
+  height: 180px;
+  padding: 0 5px;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-brand-name {
+  font-size: 8px;
+}
+
+.product-price {
+  font-size: 8px;
+}
+
+span {
+  color: #eaeaea;
+}
+
+mark {
+  background-color: #fef2e8;
+}
+
+del {
+  color: #eaeaea;
+}
