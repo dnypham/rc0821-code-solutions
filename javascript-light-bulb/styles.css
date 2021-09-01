@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+
+.on-background {
+  background-color: whitesmoke;
+}
+
+.off-background {
+  background-color: #121212;
+}
+
+.bulb {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.on {
+  background-color: rgb(249, 230, 134);
+  box-shadow: 0 0 2.5px 4px rgb(249, 230, 134,);
+}
+
+.off {
+  background-color: #212121;
+}
