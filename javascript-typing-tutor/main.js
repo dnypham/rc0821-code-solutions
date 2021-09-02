@@ -9,7 +9,14 @@ function handleKeyDown(event) {
   var percent = $paragraph;
 
   if (letters.length === index) {
-    percent.textContent = 'You got 100% correct!';
+    return;
+  }
+
+  if (letters.length - 1 === index) {
+    letters[index].className = 'correct';
+    percent.textContent = 'You got ' + index / letters.length * 100 + '% correct!';
+    index++;
+    percent.textContent = 'You got 100% correct! If you would like to play again, click the RESET button!';
   } else if (letters[index].textContent === key) {
     letters[index].className = 'correct';
     index++;
