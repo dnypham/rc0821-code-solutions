@@ -30,5 +30,11 @@ function handleKeyDown(event) {
 document.addEventListener('keydown', handleKeyDown);
 
 $button.addEventListener('click', function () {
-  location.reload();
+  for (var i = 0; i < $spanList.length; i++) {
+    $spanList[i].className = 'neutral';
+  }
+  $spanList[0].className = 'current';
+  index = 0;
+  $paragraph.textContent = 'You got 0% correct!';
+  event.target.blur();
 });
