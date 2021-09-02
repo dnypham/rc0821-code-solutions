@@ -20,7 +20,7 @@ function handleKeyDown(event) {
   } else if (letters[index].textContent === key) {
     letters[index].className = 'correct';
     index++;
-    percent.textContent = 'You got ' + index / letters.length * 100 + '% correct!';
+    percent.textContent = 'You got ' + (index / letters.length * 100).toFixed(2) + '% correct!';
     letters[index].className = 'current';
   } else if (letters[index].textContent !== key) {
     letters[index].className = 'incorrect';
