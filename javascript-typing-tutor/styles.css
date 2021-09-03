@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  font-family: monospace, sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.current {
+  color: black;
+  border-bottom: 3px solid black;
+}
+
+.neutral {
+  color: black;
+}
+
+.correct {
+  color: #4bc03a;
+}
+
+.incorrect {
+  color: #e82f1e;
+  border-bottom: 3px solid #e82f1e;
+}
+
+.reset-button {
+  font-family: monospace, sans-serif;
+  width: 80px;
+  height: 30px;
+  cursor: pointer;
+}
