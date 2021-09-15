@@ -1,13 +1,11 @@
 /* exported omit */
 function omit(source, keys) {
-  var object = source;
+  var newObject = {};
 
-  for (var key in object) {
-    for (var i = 0; i < keys.length; i++) {
-      if (key === keys[i]) {
-        delete object.key;
-      }
+  for (var key in source) {
+    if (!keys.includes(key)) {
+      newObject[key] = source[key];
     }
   }
-  return object;
+  return newObject;
 }
