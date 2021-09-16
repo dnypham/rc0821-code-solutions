@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column-small {
+  flex-basis: 10%;
+}
+
+.column-main {
+  flex-basis: 90%;
+}
+
+.icon-flex {
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-dots {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 300px;
+}
+
+.hidden {
+  display: none;
+}
