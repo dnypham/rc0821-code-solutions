@@ -11,52 +11,56 @@ var imageArray = [
   'images/025.png',
   'images/039.png'
 ];
-var count = 1;
+var count = 0;
 
 function timer() {
   resetDots();
+  count++;
 
   if (imageArray.length === count) {
     count = 0;
   }
-
-  $dots[count].className = 'fas fa-circle';
-  $img.setAttribute('src', imageArray[count]);
-  count++;
+  updateImg();
 }
 
-setInterval(timer, 3000);
+var interval = setInterval(timer, 3000);
+
+// Click Events
 
 $container.addEventListener('click', function () {
   if (event.target === $arrowLeft) {
     resetDots();
 
     if (count === 0) {
-      count = 4;
-    } else {
-      count = count - 1;
+      count = imageArray.length;
     }
-
-    $dots[count].className = 'fas fa-circle';
-    $img.setAttribute('src', imageArray[count]);
+    count--;
+    updateImg();
+    resetTimer();
   }
 
   if (event.target === $arrowRight) {
     resetDots();
+    count++;
 
     if (imageArray.length === count) {
       count = 0;
     }
-
-    $dots[count].className = 'fas fa-circle';
-    $img.setAttribute('src', imageArray[count]);
-    count++;
+    updateImg();
+    resetTimer();
   }
 
-  // if (event.target === $dots[0]) {
-
-  // }
+  for (var i = 0; i < $dots.length; i++) {
+    if (event.target === $dots[i]) {
+      resetDots();
+      count = i;
+      updateImg();
+      resetTimer();
+    }
+  }
 });
+
+// Callback Functions
 
 function resetDots() {
   for (var i = 0; i < $dots.length; i++) {
@@ -64,89 +68,12 @@ function resetDots() {
   }
 }
 
-// function timer() {
-//   if ($img.getAttribute('src') === 'images/001.png') {
-//     $img.setAttribute('src', 'images/004.png');
-//     $dots[0].className = 'far fa-circle';
-//     $dots[1].className = 'fas fa-circle';
-//   } else if ($img.getAttribute('src') === 'images/004.png') {
-//     $img.setAttribute('src', 'images/007.png');
-//     $dots[1].className = 'far fa-circle';
-//     $dots[2].className = 'fas fa-circle';
-//   } else if ($img.getAttribute('src') === 'images/007.png') {
-//     $img.setAttribute('src', 'images/025.png');
-//     $dots[2].className = 'far fa-circle';
-//     $dots[3].className = 'fas fa-circle';
-//   } else if ($img.getAttribute('src') === 'images/025.png') {
-//     $img.setAttribute('src', 'images/039.png');
-//     $dots[3].className = 'far fa-circle';
-//     $dots[4].className = 'fas fa-circle';
-//   } else if ($img.getAttribute('src') === 'images/039.png') {
-//     $img.setAttribute('src', 'images/001.png');
-//     $dots[4].className = 'far fa-circle';
-//     $dots[0].className = 'fas fa-circle';
-//   }
-// }
+function updateImg() {
+  $dots[count].className = 'fas fa-circle';
+  $img.setAttribute('src', imageArray[count]);
+}
 
-// setInterval(timer, 3000);
-
-// $container.addEventListener('click', function () {
-//   for (var i = 0; i < $dots.length; i++) {
-//     $dots[i].className = 'far fa-circle';
-//   }
-
-//   if (event.target === $arrowLeft) {
-//     if ($img.getAttribute('src') === 'images/001.png') {
-//       $img.setAttribute('src', 'images/039.png');
-//       $dots[4].className = 'fas fa-circle';
-//     } else if ($img.getAttribute('src') === 'images/039.png') {
-//       $img.setAttribute('src', 'images/025.png');
-//       $dots[3].className = 'fas fa-circle';
-//     } else if ($img.getAttribute('src') === 'images/025.png') {
-//       $img.setAttribute('src', 'images/007.png');
-//       $dots[2].className = 'fas fa-circle';
-//     } else if ($img.getAttribute('src') === 'images/007.png') {
-//       $img.setAttribute('src', 'images/004.png');
-//       $dots[1].className = 'fas fa-circle';
-//     } else if ($img.getAttribute('src') === 'images/004.png') {
-//       $img.setAttribute('src', 'images/001.png');
-//       $dots[0].className = 'fas fa-circle';
-//     }
-//   }
-
-//   if (event.target === $arrowRight) {
-//     if ($img.getAttribute('src') === 'images/001.png') {
-//       $img.setAttribute('src', 'images/004.png');
-//       $dots[1].className = 'fas fa-circle';
-//     } else if ($img.getAttribute('src') === 'images/004.png') {
-//       $img.setAttribute('src', 'images/007.png');
-//       $dots[2].className = 'fas fa-circle';
-//     } else if ($img.getAttribute('src') === 'images/007.png') {
-//       $img.setAttribute('src', 'images/025.png');
-//       $dots[3].className = 'fas fa-circle';
-//     } else if ($img.getAttribute('src') === 'images/025.png') {
-//       $img.setAttribute('src', 'images/039.png');
-//       $dots[4].className = 'fas fa-circle';
-//     } else if ($img.getAttribute('src') === 'images/039.png') {
-//       $img.setAttribute('src', 'images/001.png');
-//       $dots[0].className = 'fas fa-circle';
-//     }
-//   }
-
-//   if (event.target === $dots[0]) {
-//     $img.setAttribute('src', 'images/001.png');
-//     $dots[0].className = 'fas fa-circle';
-//   } else if (event.target === $dots[1]) {
-//     $img.setAttribute('src', 'images/004.png');
-//     $dots[1].className = 'fas fa-circle';
-//   } else if (event.target === $dots[2]) {
-//     $img.setAttribute('src', 'images/007.png');
-//     $dots[2].className = 'fas fa-circle';
-//   } else if (event.target === $dots[3]) {
-//     $img.setAttribute('src', 'images/025.png');
-//     $dots[3].className = 'fas fa-circle';
-//   } else if (event.target === $dots[4]) {
-//     $img.setAttribute('src', 'images/039.png');
-//     $dots[4].className = 'fas fa-circle';
-//   }
-// });
+function resetTimer() {
+  clearInterval(interval);
+  interval = setInterval(timer, 3000);
+}
