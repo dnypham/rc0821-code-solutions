@@ -33,17 +33,27 @@ $container.addEventListener('click', function () {
 
     if (count === imageArray[0]) {
       count = imageArray.length - 1;
+      $dots[count].className = 'fas fa-circle';
       $img.setAttribute('src', imageArray[count]);
+      return;
     }
+
+    count--;
+    $dots[count - 1].className = 'fas fa-circle';
+    $img.setAttribute('src', imageArray[count - 1]);
   }
 
   if (event.target === $arrowRight) {
+    resetDots();
 
+    count++;
+    $dots[count].className = 'fas fa-circle';
+    $img.setAttribute('src', imageArray[count]);
   }
 
-  if (event.target === $dots[0]) {
+  // if (event.target === $dots[0]) {
 
-  }
+  // }
 });
 
 function resetDots() {
