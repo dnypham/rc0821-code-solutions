@@ -31,24 +31,26 @@ $container.addEventListener('click', function () {
   if (event.target === $arrowLeft) {
     resetDots();
 
-    if (count === imageArray[0]) {
-      count = imageArray.length - 1;
-      $dots[count].className = 'fas fa-circle';
-      $img.setAttribute('src', imageArray[count]);
-      return;
+    if (count === 0) {
+      count = 4;
+    } else {
+      count = count - 1;
     }
 
-    count--;
-    $dots[count - 1].className = 'fas fa-circle';
-    $img.setAttribute('src', imageArray[count - 1]);
+    $dots[count].className = 'fas fa-circle';
+    $img.setAttribute('src', imageArray[count]);
   }
 
   if (event.target === $arrowRight) {
     resetDots();
 
-    count++;
+    if (imageArray.length === count) {
+      count = 0;
+    }
+
     $dots[count].className = 'fas fa-circle';
     $img.setAttribute('src', imageArray[count]);
+    count++;
   }
 
   // if (event.target === $dots[0]) {
