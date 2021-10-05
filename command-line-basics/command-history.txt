@@ -1,0 +1,668 @@
+    1  exit
+    2  whoami
+    3  exit
+    4  whoami
+    5  exit
+    6  whoami
+    7  git config --global user.name "Daniel Pham"
+    8  git config --global user.email "dnypham@gmail.com"
+    9  git config --global --list
+   10  exit
+   11  whoami
+   12  exit
+   13  cd repos/
+   14  ls
+   15  cd rc0821-code-solutions/
+   16  clear
+   17  cd
+   18  cd repos/
+   19  ls
+   20  cd rc0821-code-solutions/
+   21  clear
+   22  git branch javascript-carousel
+   23  git switch javascript-carousel
+   24  clear
+   25  git add javascript-carousel
+   26  gti status
+   27  git status
+   28  git commit -m "Completed HTML."
+   29  clear
+   30  git add javascript-carousel
+   31  git commit -m "Refactoring JS."
+   32  git commit -m "Refactoring JS." --no-verify
+   33  clear
+   34  git switch master
+   35  cd
+   36  exit
+   37  clear
+   38  cd ~/repos/rc0821-code-solutions/
+   39  clear
+   40  git switch javascript-carousel 
+   41  clear
+   42  git add javascript-carousel/
+   43  git commit -m "Working on JS."
+   44  git switch master
+   45  clear
+   46  git branch http-messages
+   47  git switch http-messages
+   48  clear
+   49  pwd
+   50  clear
+   51  cd http-messages/
+   52  http http://example.com
+   53  clear
+   54  http --verbose http://www.example.com
+   55  clear
+   56  http --body GET https://jsonplaceholder.typicode.com/users > users.json
+   57  http --body GET https://example.com > index.html
+   58  git add http-messages
+   59  git status
+   60  git add ./
+   61  git status
+   62  git commit -m "Completed http-messages exercise."
+   63  git push origin http-messages 
+   64  clear
+   65  git switch master
+   66  cd .
+   67  cd ../
+   68  clear
+   69  git switch javascript-carousel 
+   70  clear
+   71  git add javascript-carousel
+   72  git commit -m "Working on arrow event listeners."
+   73  clear
+   74  git switch master
+   75  clear
+   76  git branch javascript-ajax
+   77  git switch javascript-ajax
+   78  clear
+   79  git add javascript-ajax
+   80  git commit -m "Completed javascript-ajax exercise."
+   81  git push origin javascript-ajax
+   82  git add javascript-ajax/
+   83  git commit -m "Actually completed javascript-ajax exercise."
+   84  git push origin javascript-ajax 
+   85  clear
+   86  git switch master
+   87  clear
+   88  git pull origin master
+   89  clear
+   90  git switch javascript-carousel 
+   91  clear
+   92  git add javascript-carousel
+   93  git commit -m "Completed javascript-carousel exercise."
+   94  git push origin javascript-carousel 
+   95  clear
+   96  git switch master
+   97  clear
+   98  git switch object-manipulation-2
+   99  clear
+  100  git switch master
+  101  clear
+  102  git pull origin master
+  103  clear
+  104  exit
+  105  clear
+  106  cd ~/repos/challenges/
+  107  clear
+  108  http https://api.openbrewerydb.org/breweries
+  109  http  https://api.openbrewerydb.org/breweries?by_city=san_diego
+  110  http https://api.openbrewerydb.org/breweries?by_state=california
+  111  http https://api.openbrewerydb.org/breweries?by_state=ohio&sort=type,name:asc
+  112  http  https://api.openbrewerydb.org/breweries?by_city=los_angeles
+  113  http http://lookup-service-prod.mlb.com/json/named.search_player_all.bam
+  114  http https://api.suredbits.com/nfl/v0/info
+  115  http https://test.api.suredbits.com/nfl/v0/info
+  116  http wss://test.api.suredbits.com/nfl/v0
+  117  http https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=Arsenal
+  118  clear
+  119  cd ~/repos
+  120  clear
+  121  git clone git@github.com:dnypham/ajax-project.git
+  122  cd ajax-project/
+  123  clear
+  124  npm ci
+  125  clear
+  126  branch issue-1-view-list-of-local-breweries
+  127  git branch issue-1-view-list-of-local-breweries
+  128  git switch issue-1-view-list-of-local-breweries 
+  129  clear
+  130  git add .
+  131  git status
+  132  git commit -m "Add logo and app name to navigation bar."
+  133  git push origin issue-1-view-list-of-local-breweries 
+  134  clear
+  135  exit
+  136  clear
+  137  cd ~/repos/ajax-project/
+  138  clear
+  139  git status
+  140  git add .
+  141  git status
+  142  git commit -m "Add and align navigation bar items."
+  143  git push origin issue-1-view-list-of-local-breweries 
+  144  clear
+  145  git add .
+  146  git commit -m "Create and style homepage header."
+  147  git push origin issue-1-view-list-of-local-breweries 
+  148  clear
+  149  git add .
+  150  git status
+  151  git commit -m "Add first image on homepage."
+  152  git push origin issue-1-view-list-of-local-breweries 
+  153  clear
+  154  git add .
+  155  git commit -m "Add all three homepage images with text and center them."
+  156  git push origin issue-1-view-list-of-local-breweries 
+  157  git add .
+  158  git commit -m "Add border below images and 'to get started' text."
+  159  git push origin issue-1-view-list-of-local-breweries 
+  160  clear
+  161  git status
+  162  git add .
+  163  git commit -m "Add local brewery button."
+  164  git add .
+  165  git commit -m "Add alt text for images on homepage."
+  166  git push origin issue-1-view-list-of-local-breweries 
+  167  clear
+  168  exit
+  169  clear
+  170  cd ~/repos/ajax-project/
+  171  clear
+  172  git add .
+  173  git commit -m "Style search bar and add search icon."
+  174  git push origin issue-1-view-list-of-local-breweries 
+  175  clear
+  176  git add .
+  177  git commit -m "Fix footer for mobile view."
+  178  git push origin issue-1-view-list-of-local-breweries 
+  179  clear
+  180  git add .
+  181  git commit -m "Refactor row that holds image container with text."
+  182  git push origin issue-1-view-list-of-local-breweries 
+  183  clear
+  184  git add .
+  185  git commit -m "Add event listener to github icon to open github profile."
+  186  git push origin issue-1-view-list-of-local-breweries 
+  187  clear
+  188  git add .
+  189  git commit -m "Add event listener to LinkedIn icon to go to LinkedIn profile."
+  190  git push origin issue-1-view-list-of-local-breweries 
+  191  clear
+  192  git add .
+  193  git commit -m "Create and style Local Breweries view."
+  194  git push origin issue-1-view-list-of-local-breweries 
+  195  clear
+  196  git add .
+  197  git commit -m "Create and style brewery cards with information and map."
+  198  git add .
+  199  git commit -m "Create and style brewery cards with information and map."
+  200  git add .
+  201  git commit -m "Create and style brewery cards with information and map."
+  202  git push origin issue-1-view-list-of-local-breweries 
+  203  clear
+  204  git add .
+  205  git commit -m "Add view switching between Homepage View and Local Breweries View."
+  206  git push origin issue-1-view-list-of-local-breweries 
+  207  clear
+  208  git add .
+  209  git commit -m "Create render function template."
+  210  git push origin issue-1-view-list-of-local-breweries 
+  211  clear
+  212  git add .
+  213  git commit -m "Confirm brewery cards are rendered in the correct place."
+  214  git push origin issue-1-view-list-of-local-breweries 
+  215  clear
+  216  git add .
+  217  git commit-m "Create click event on local button to get information from ipgeo and openbrewerydb to render local breweries on brewery view page."
+  218  git commit -m "Create click event on local button to get information from ipgeo and openbrewerydb to render local breweries on brewery view page."
+  219  clear
+  220  git add .
+  221  git commit -m "Remove unnecessary if statement in local button event listener."
+  222  git push origin issue-1-view-list-of-local-breweries 
+  223  clear
+  224  git add .
+  225  git commit -m "Refactor brewery phone number so it is more readable."
+  226  git push origin issue-1-view-list-of-local-breweries 
+  227  clear
+  228  git add .
+  229  git commit -m "Remove maps for breweries that do not have a latitude and longitude."
+  230  git push origin issue-1-view-list-of-local-breweries 
+  231  clear
+  232  git add .
+  233  git commit -m "Remove city in brewery info card and add city/state to address."
+  234  git push origin issue-1-view-list-of-local-breweries 
+  235  clear
+  236  git add .
+  237  git commit -m "Refactored website urls on brewery cards."
+  238  git push origin issue-1-view-list-of-local-breweries 
+  239  clear
+  240  git add .
+  241  git commit -m "Add no map image to breweries without map coordinates."
+  242  git push origin issue-1-view-list-of-local-breweries 
+  243  clear
+  244  git add .
+  245  git commit -m "Create mobile view and half desktop view."
+  246  git push origin issue-1-view-list-of-local-breweries 
+  247  clear
+  248  git add .
+  249  git commit -m "Delete commented out media queries."
+  250  git push origin issue-1-view-list-of-local-breweries 
+  251  clear
+  252  git add .
+  253  git commit -m "Change height so header looks nicer in mobile view."
+  254  clear
+  255  git push origin issue-1-view-list-of-local-breweries 
+  256  clear
+  257  git add .
+  258  git commit -m "Add functionality to open a new tab in the browser when a brewery website hotlink is clicked."
+  259  git push origin issue-1-view-list-of-local-breweries 
+  260  clear
+  261  git add .
+  262  git commit -m "Fix error code when a brewery doesn't have a phone number."
+  263  git push origin issue-1-view-list-of-local-breweries 
+  264  clear
+  265  git switch master
+  266  git pull origin master
+  267  clear
+  268  exit
+  269  clear
+  270  cd ~/repos/ajax-project/
+  271  git branch user-can-search-by-city
+  272  git switch user-can-search-by-city 
+  273  clear
+  274  git add .
+  275  git status
+  276  git commit -m "Fix line size of line at the bottom of the homepage view."
+  277  git push origin user-can-search-by-city 
+  278  clear
+  279  git add .
+  280  git commit -m "Change GitHub and LinkedIn icons to open a new tab through an anchor tag instead of JavaScript."
+  281  git push origin user-can-search-by-city 
+  282  clear
+  283  git status
+  284  clear
+  285  git add .
+  286  git status
+  287  git commit -m "Change JavaScript so that when local breweries are searched, breweries are shown in a list of closest to user's location."
+  288  git push origin user-can-search-by-city 
+  289  clear
+  290  git status
+  291  clear
+  292  git add .
+  293  git commit -m "Refactor JavaScript so that if a city or state returns null, it is omitted from brewery information."
+  294  clear
+  295  git push origin user-can-search-by-city 
+  296  clear
+  297  git add .
+  298  git commit -m "Create functionality so a user can search for a list of breweries by city."
+  299  git push origin user-can-search-by-city 
+  300  clear
+  301  git status
+  302  git add .
+  303  git commit -m "Fix brewery city in header resetting when searching from homepage. #2"
+  304  clear
+  305  git push origin user-can-search-by-city 
+  306  clear
+  307  git add .
+  308  git commit -m "Add transform and transition properties to homepage images. #2"
+  309  git push origin user-can-search-by-city 
+  310  clear
+  311  git status
+  312  git add .
+  313  git commit -m "Add JavaScript to visually show the user if no breweries are found."
+  314  git push origin user-can-search-by-city 
+  315  clear
+  316  git switch master
+  317  git pull origin master
+  318  clear
+  319  git branch issue-3-user-can-save-breweries
+  320  git switch issue-3-user-can-save-breweries 
+  321  clear
+  322  git add .
+  323  git commit -m "Add heart icon to each brewery card. #3"
+  324  git push origin issue-3-user-can-save-breweries 
+  325  clear
+  326  git add .
+  327  git commit -m "Add functionality to toggle heart icon on brewery cards. #3"
+  328  clear
+  329  git add .
+  330  git commit -m "Add animation to heart toggle. #3"
+  331  git push origin issue-3-user-can-save-breweries 
+  332  clear
+  333  git add .
+  334  git commit -m "Add functionality when a user clicks on the heart icon to save brewery id. #3"
+  335  clear
+  336  git add .
+  337  git commit -m "Create functionality to add breweries to a list by clicking the heart icon. Refactor code so brewery card info reads well. #3"
+  338  git push origin issue-3-user-can-save-breweries 
+  339  git add .
+  340  git commit -m "Add a way to remove brewery from favorites list by clicking the heart icon. #3"
+  341  git add .
+  342  git commit -m "Add a way to remove brewery from favorites list by clicking the heart icon. #3"
+  343  git push origin issue-3-user-can-save-breweries 
+  344  clear
+  345  git add .
+  346  git commit -m "Remove unnecessary code and change heart icon when rendering depending on if brewery is saved in favorites list. #3"
+  347  clear
+  348  git push origin issue-3-user-can-save-breweries 
+  349  clear
+  350  git add .
+  351  git commit -m "Add a way to instantly delete breweries off favorites list without affecting another view. #3"
+  352  git push origin issue-3-user-can-save-breweries 
+  353  clear
+  354  git switch master
+  355  git pull origin master
+  356  clear
+  357  git branch issue-4-user-can-view-favorites-on-load
+  358  git switch issue-4-user-can-view-favorites-on-load 
+  359  clear
+  360  git add .
+  361  git commit -m "Save data of favorite brweries in browser. #4"
+  362  clear
+  363  git add .
+  364  git commit -m "Create and style pop up modal. #4"
+  365  git push origin issue-4-user-can-view-favorites-on-load 
+  366  clear
+  367  git add .
+  368  git commit -m "Work continues on pop up modal. #4"
+  369  git push origin issue-4-user-can-view-favorites-on-load 
+  370  clear
+  371  exit
+  372  cd ~/repos/ajax-project/
+  373  clear
+  374  exit
+  375  clear
+  376  cd ~/repos/ajax-project/
+  377  git add .
+  378  git commit -m "Add pop up when removing brewery from favorites list. #4"
+  379  git push origin issue-4-user-can-view-favorites-on-load 
+  380  clear
+  381  git switch master
+  382  git pull origin master
+  383  clear
+  384  git branch issue-5-user-can-view-additional-results
+  385  git switch issue-5-user-can-view-additional-results 
+  386  clear
+  387  git add .
+  388  git commit -m "Add left and right arrows with HTML and CSS. #5"
+  389  git push origin issue-5-user-can-view-additional-results 
+  390  clear
+  391  git add .
+  392  git commit -m "Add functionality to click arrow icons to update results. #5"
+  393  git push origin issue-5-user-can-view-additional-results 
+  394  git add .
+  395  git commit -m "Hide and show arrow icons depending on view. #5"
+  396  git push origin issue-5-user-can-view-additional-results 
+  397  clear
+  398  git add .
+  399  git commit -m "Fix JavaScript so user cannot see more results if there aren't any. #5"
+  400  git push origin issue-5-user-can-view-additional-results 
+  401  clear
+  402  git add .
+  403  git commit -m "Fix bugs dealing with page results. #5"
+  404  git push origin issue-5-user-can-view-additional-results 
+  405  clear
+  406  git switch master
+  407  git pull origin master
+  408  clear
+  409  git branch issue-6-user-can-search-by-name
+  410  git switch issue-6-user-can-search-by-name 
+  411  clear
+  412  git add .
+  413  git commit -m "Add a way for user to search for breweries by name. #6"
+  414  git push origin issue-6-user-can-search-by-name 
+  415  clear
+  416  git status
+  417  clear
+  418  git switch master
+  419  clear
+  420  git pull origin master
+  421  clear
+  422  git branch issue-7-create-account
+  423  git switch issue-7-create-account 
+  424  clear
+  425  git add .
+  426  git commit -m "Still working on sign up view. #7"
+  427  git add .
+  428  git commit -m "Change view so not confused when load. Still working. #7"
+  429  git push origin issue-7-create-account 
+  430  clear
+  431  exit
+  432  clear
+  433  cd ~/repos/ajax-project/
+  434  clear
+  435  git add .
+  436  git commit -m "Change IPGEO API to HTTPS. #7"
+  437  git push origin issue-7-create-account 
+  438  clear
+  439  git switch master
+  440  git branch http-https-fix
+  441  git switch http-https-fix 
+  442  clear
+  443  git add .
+  444  git commit -m "Fix http-https issue with live project on GitHub pages."
+  445  git push origin http-https-fix 
+  446  clear
+  447  git switch master
+  448  git pull origin master 
+  449  clear
+  450  exit
+  451  clear
+  452  exit
+  453  clear
+  454  cd ~/repos/ajax-project/
+  455  git switch issue-7-create-account 
+  456  clear
+  457  git add .
+  458  git commit -m "Working on Sign In view. #7"
+  459  git push origin issue-7-create-account 
+  460  clear
+  461  exit
+  462  clear
+  463  cd ~/repos/ajax-project/
+  464  clear
+  465  git add .
+  466  git status
+  467  git commit -m "Create and style 'Sign In' view. #7"
+  468  git push origin issue-7-create-account 
+  469  clear
+  470  git add .
+  471  git status
+  472  git commit -m "Fix 'Sign In' header. #7"
+  473  git push origin issue-7-create-account 
+  474  clear
+  475  git add .
+  476  git commit -m "Style 'Sign In' view text boxes. #7"
+  477  git push origin issue-7-create-account 
+  478  clear
+  479  git add .
+  480  git commit -m "Fix 'Sign In' view inputs. #7"
+  481  git add .
+  482  git commit -m "Add functionality to change view to 'Sign In' view on click. #7"
+  483  git push origin issue-7-create-account 
+  484  clear
+  485  git add .
+  486  git commit -m "Fix typo in CSS for 'Sign In' input border color. #7"
+  487  git push origin issue-7-create-account 
+  488  git add .
+  489  git commit -m "Fix text for Sign Up button. #7"
+  490  git push origin issue-7-create-account 
+  491  clear
+  492  git add .
+  493  git commit -m "Delete commented out code and fix spacing for Sign In. #7"
+  494  git push origin issue-7-create-account 
+  495  clear
+  496  git add .
+  497  git commit -m "Add 'hidden' class to 'Sign In' view when clicking favorites. #7"
+  498  git push origin issue-7-create-account 
+  499  clear
+  500  git add .
+  501  git commit -m "Refactored html to use two form tags for Sign In and Sign Up. Add attributes to inputs. #7"
+  502  git push origin issue-7-create-account 
+  503  clear
+  504  git status
+  505  git add .
+  506  git commit -m "Test new data object to work with creating new users. Work continues. #7"
+  507  git commit -m "Test new data object to create new users. Work Continues. #7" --no-verify
+  508  git push origin issue-7-create-account 
+  509  clear
+  510  git add .
+  511  git commit -m "Define viewSwap function. Create placeholder object for users. #7" --no-verify
+  512  git push origin issue-7-create-account 
+  513  clear
+  514  git status
+  515  git add .
+  516  git status
+  517  git commit -m "Refactor viewSwap. #7"
+  518  git push origin issue-7-create-account 
+  519  clear
+  520  git status
+  521  exit
+  522  clear
+  523  cd ~/repos/ajax-project/
+  524  clear
+  525  git status
+  526  clear
+  527  git add .
+  528  git commit -m "Change password text box types to 'password'. #7"
+  529  git push origin issue-7-create-account 
+  530  clear
+  531  git add .
+  532  git commit -m "Add attributes to password input fields. #7"
+  533  git push origin issue-7-create-account 
+  534  clear
+  535  exit
+  536  clear
+  537  cd ~/repos/ajax-project/
+  538  git status
+  539  git add .
+  540  git commit -m "Work continues on sign in. #7"
+  541  git push origin issue-7-create-account 
+  542  clear
+  543  cd .
+  544  git switch master
+  545  cd
+  546  git status
+  547  ls
+  548  cd ~/repos/rc0821-code-solutions/
+  549  clear
+  550  git branch es6-const-let
+  551  git switch es6-const-let 
+  552  clear
+  553  git add .
+  554  git status
+  555  git commit -m "Completed es6-const-let exercise."
+  556  git push origin es6-const-let 
+  557  clear
+  558  git switch master
+  559  clear
+  560  git branch es6-template-literals
+  561  git switch es6-template-literals 
+  562  clear
+  563  git add .
+  564  git commit -m "Completed es6-template-literals exercise."
+  565  git push origin es6-template-literals 
+  566  clear
+  567  git switch master
+  568  git pull origin master
+  569  clear
+  570  git branch es6-destructuring
+  571  git switch es6-destructuring 
+  572  clear
+  573  git status
+  574  git add .
+  575  git commit -m "Completed es6-destructuring exercise."
+  576  git push origin es6-destructuring 
+  577  git switch master
+  578  clear
+  579  git pull origin master
+  580  clear
+  581  git branch es6-arrow-functions
+  582  git switch es6-arrow-functions 
+  583  clear
+  584  git add .
+  585  git commit -m "Completed es6-arrow-functions exercise."
+  586  git push origin es6-arrow-functions 
+  587  clear
+  588  git switch master
+  589  git pull origin master
+  590  clear
+  591  git branch command-line-basics
+  592  git switch command-line-basics 
+  593  clear
+  594  cd ~/repos/rc0821-code-solutions/command-line-basics/
+  595  pwd
+  596  man man
+  597  man cat
+  598  cat laziness.txt
+  599  cat impatience.txt
+  600  cat hubris.txt
+  601  man cat
+  602  cat laziness.txt impatience.txt hubris.txt 
+  603  man cat
+  604  cat laziness.txt impatience.txt hubris.txt  > three-virtues.txt
+  605  cat three-virtues.txt 
+  606  clear
+  607  man ls
+  608  clear
+  609  ls
+  610  ls -a
+  611  ls -F
+  612  man ls
+  613  ls lfz-staff/
+  614  ls -aF lfz-staff > lfz-staff/contents.txt
+  615  cat lfz-staff/contents.txt 
+  616  clear
+  617  man pwd
+  618  pwd
+  619  pwd > i-was-here.txt
+  620  ls
+  621  cat i-was-here.txt 
+  622  clear
+  623  man echo
+  624  echo 'Hello, World!'
+  625  echo 'Hello, World!' > hello.txt
+  626  ls
+  627  cat hello.txt 
+  628  man touch
+  629  clear
+  630  touch tag-youre-it.txt
+  631  touch boop.txt
+  632  touch snoot/boop.txt
+  633  ls snoot
+  634  mac mkdir
+  635  man mkdir
+  636  clear
+  637  man mkdir
+  638  clear
+  639  mkdir parent
+  640  ls parent
+  641  ls parent/
+  642  ls
+  643  mkdir -p parent/child/grandchild
+  644  touch .gitkeep parent/child/grandchild
+  645  ls -a parent/child/grandchild/
+  646  ls -a parent/child/grandchild
+  647  ls -a
+  648  clear
+  649  man mv
+  650  mv pokiemans pokemon
+  651  ls
+  652  clear
+  653  man rm
+  654  rm lol.txt
+  655  ls
+  656  rm -r kill-me/
+  657  ls
+  658  clear
+  659  man cp
+  660  cp and-then.txt no-and-then.txt
+  661  ls
+  662  cat and-then.txt no-and-then.txt 
+  663  man history
+  664  clear
+  665  history
+  666  touch history > command-history.txt
+  667  cat command-history.txt 
+  668  history > command-history.txt
