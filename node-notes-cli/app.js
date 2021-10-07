@@ -17,7 +17,15 @@ if (command === 'read') {
     if (err) throw err;
   });
 } else if (command === 'update') {
+  for (const property in notes) {
+    if (property === process.argv[3]) {
+      notes[property] = process.argv[4];
+    }
+  }
 
+  fs.writeFile('data.json', JSON.stringify(notebook, null, 2), err => {
+    if (err) throw err;
+  });
 } else if (command === 'delete') {
 
 }
