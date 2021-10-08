@@ -29,7 +29,7 @@ for (const key in grades) {
 }
 
 app.get('/api/grades', function (req, res) {
-  res.send(array);
+  res.json(array);
 });
 
 app.listen(3000, () => {
