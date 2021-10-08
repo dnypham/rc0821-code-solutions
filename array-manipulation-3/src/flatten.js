@@ -2,14 +2,17 @@
 
 function flatten(array) {
   const newArray = [];
+
   for (let i = 0; i < array.length; i++) {
-    if (Array.isArray(array[i])) {
-      for (let i = 0; i < array[i].length; i++) {
-        newArray.push(array[i]);
-      }
+    const test = array.shift();
+    console.log(test);
+
+    if (Array.isArray(test)) {
+      console.log(array[i]);
     } else {
-      newArray.push(array[i]);
+      newArray.push(test);
     }
   }
-  return newArray;
+
+  console.log(newArray);
 }
