@@ -4,15 +4,14 @@ function flatten(array) {
   const newArray = [];
 
   for (let i = 0; i < array.length; i++) {
-    const test = array.shift();
-    console.log(test);
 
-    if (Array.isArray(test)) {
-      console.log(array[i]);
+    if (Array.isArray(array[i])) {
+      for (let x = 0; x < array[i].length; x++) {
+        newArray.push(array[i][x]);
+      }
     } else {
-      newArray.push(test);
+      newArray.push(array[i]);
     }
   }
-
-  console.log(newArray);
+  return newArray;
 }
