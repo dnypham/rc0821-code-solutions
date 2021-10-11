@@ -31,6 +31,10 @@ app.post('/api/notes', (req, res) => {
   const content = req.body.content;
   if (!content) {
     res.status(400).json({ error: 'content is a required field' });
+  } else if (content) {
+
+    notebook.nextId++;
+    res.status(201).json();
   }
 });
 
