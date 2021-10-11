@@ -27,6 +27,13 @@ app.get('/api/notes/:id', (req, res) => {
   }
 });
 
+app.post('/api/notes', (req, res) => {
+  const content = req.body.content;
+  if (!content) {
+    res.status(400).json({ error: 'content is a required field' });
+  }
+});
+
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
   console.log('Listening on port 3000!');
