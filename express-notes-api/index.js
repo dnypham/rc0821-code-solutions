@@ -15,6 +15,12 @@ app.get('/api/notes', (req, res) => {
   res.status(200).json(notesArray);
 });
 
+app.get('/api/notes/:id', (req, res) => {
+  if (req.params.id < 1 || !Number.isInteger(req.params.id)) {
+    res.status(400).json({ error: 'id must be a positive integer' });
+  }
+});
+
 app.listen(3000, () => {
   // eslint-disable-next-line no-console
   console.log('Listening on port 3000!');
