@@ -29,12 +29,16 @@ app.get('/api/notes/:id', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
   const content = req.body.content;
+  let newNote = notebook.notes[notebook.nextId];
+
   if (!content) {
     res.status(400).json({ error: 'content is a required field' });
   } else if (content) {
-
+    newNote = {};
+    newNote.id = parseInt(notebook.nextId);
+    newNote.content = content;
     notebook.nextId++;
-    res.status(201).json();
+    res.status(201).json(newNote);
   }
 });
 
