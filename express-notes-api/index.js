@@ -38,15 +38,36 @@ app.post('/api/notes', (req, res) => {
     newNote.id = parseInt(notebook.nextId);
     notebook.notes[newNote.id] = newNote;
     notebook.nextId++;
+
+    fs.writeFile('./data.json', JSON.stringify(notebook, null, 2), err => {
+      if (err) {
+        res.status(500).json({ Error: 'An unexpected error occurred.' });
+      } else {
+        res.status(201).json(newNote);
+      }
+    });
+  }
+});
+
+app.delete('/api/notes/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+
+  if (id < 1 || !Number.isInteger(id)) {
+    res.status(400).json({ Error: 'id must be a positive integer.' });
+  } else if (!notebook.notes[id]) {
+    res.status(404).json({ Error: `Cannot find note with id ${id}.` });
+  } else {
+    delete (notebook.notes[id]);
+
+    fs.writeFile('./data.json', JSON.stringify(notebook, null, 2), err => {
+      if (err) {
+        res.status(500).json({ Error: 'An unexpected error occurred.' });
+      } else {
+        res.status(204).json();
+      }
+    });
   }
 
-  fs.writeFile('data.json', JSON.stringify(notebook, null, 2), err => {
-    if (err) {
-      res.status(500).json({ Error: 'An unexpected error occurred.' });
-    } else {
-      res.status(201).json(newNote);
-    }
-  });
 });
 
 app.listen(3000, () => {
