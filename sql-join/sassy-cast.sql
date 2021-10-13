@@ -1,7 +1,7 @@
-SELECT "actors"."firstName" AS "firstName",
-       "actors"."lastName"  AS "lastName",
-       "films"."title"      AS "title"
+SELECT "actors"."firstName",
+       "actors"."lastName",
+       "films"."title" AS "filmTitle"
   FROM "actors"
   JOIN "castMembers" USING ("actorId")
   JOIN "films"       USING ("filmId")
- WHERE "title" = 'Jersey Sassy';
+ WHERE "films"."title" = 'Jersey Sassy';

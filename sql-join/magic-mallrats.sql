@@ -1,8 +1,8 @@
-SELECT "customers"."firstName" AS "firstName",
-       "customers"."lastName"  AS "lastName",
-       "films"."title"       AS "title"
+SELECT "customers"."firstName",
+       "customers"."lastName",
+       "films"."title" AS "filmTitle"
   FROM "customers"
   JOIN "rentals"   USING ("customerId")
   JOIN "inventory" USING ("inventoryId")
   JOIN "films"     USING ("filmId")
- WHERE "title" = 'Magic Mallrats';
+ WHERE "films"."title" = 'Magic Mallrats';

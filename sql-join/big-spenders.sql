@@ -1,6 +1,6 @@
-SELECT "customers"."firstName" AS "firstName",
-       "customers"."lastName"  AS "lastName",
-       "payments"."amount"     AS "amount"
+SELECT "customers"."firstName",
+       "customers"."lastName",
+       "payments"."amount"
   FROM "customers"
   JOIN "payments" USING ("customerId")
   ORDER BY "payments"."amount" desc
