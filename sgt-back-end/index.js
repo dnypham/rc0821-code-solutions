@@ -34,10 +34,16 @@ app.get('/api/grades', (req, res) => {
 app.post('/api/grades', (req, res) => {
   const { course, name, score } = req.body;
 
-  if (name === undefined || course === undefined || score === undefined) {
-    res.status(400).json({ error: 'Missing name, course, or grade' });
+  if (!name) {
+    res.status(400).json({ error: 'Invalid name' });
     return;
-  } else if (!Number.isInteger(score) || score > 0 || score < 100) {
+  } else if (!course) {
+    res.status(400).json({ error: 'Invalid course' });
+    return;
+  } else if (!score) {
+    res.status(400).json({ error: 'Invalid score' });
+    return;
+  } else if (score < 0 || score > 100) {
     res.status(400).json({ error: 'Score must be an integer from 0 to 100' });
     return;
   }
@@ -57,9 +63,47 @@ app.post('/api/grades', (req, res) => {
     })
     .catch(err => {
       // eslint-disable-next-line no-console
-      console.log(err);
+      console.log('Post grades error:', err);
       res.status(500).json({ error: 'An unexpected error occurred' });
     });
+});
+
+app.put('/api/grades/:gradeId', (req, res) => {
+  const gradeId = parseInt(req.params.gradeId);
+  const { course, name, score } = req.body;
+
+  if (gradeId < 1) {
+    res.status(400).json({ error: 'gradeId is invalid' });
+    return;
+  } else if (!name || !course || !score) {
+    res.status(400).json({ error: 'Invalid name, course, or score' });
+    return;
+  }
+
+  const sql = `
+    UPDATE "grades"
+       SET "name"    = $1,
+           "course"  = $2,
+           "score"   = $3
+     WHERE "gradeId" = $4
+    RETURNING *
+  `;
+  const params = [name, course, score, gradeId];
+
+  db.query(sql, params)
+    .then(data => {
+      const grade = data.rows[gradeId];
+
+      if (!grade) {
+        res.status(404).json({ error: `Cannot find grade with gradeId: ${gradeId}` });
+      }
+      res.json(grade);
+    })
+    .catch(err => {
+      console.log('Put grades error:', err);
+      res.status(500).json({ Error: 'An unexpected error occurred' });
+    });
+
 });
 
 app.listen(3000, () => {
