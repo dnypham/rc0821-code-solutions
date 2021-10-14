@@ -101,11 +101,13 @@ app.put('/api/grades/:gradeId', (req, res) => {
 
   db.query(sql, params)
     .then(data => {
-      const grade = data.rows;
+      const [grade] = data.rows;
+
       if (!grade) {
         res.status(404).json({ error: `Cannot find grade with gradeId: ${gradeId}` });
         return;
       }
+
       res.json(grade);
     })
     .catch(err => {
@@ -113,7 +115,37 @@ app.put('/api/grades/:gradeId', (req, res) => {
       console.log('Put grades error:', err);
       res.status(500).json({ Error: 'An unexpected error occurred' });
     });
+});
 
+app.delete('/api/grades/:gradeId', (req, res) => {
+  const gradeId = parseInt(req.params.gradeId);
+
+  if (gradeId < 1) {
+    res.status(400).json({ error: `gradeId: ${gradeId} is invalid` });
+  }
+
+  const sql = `
+    DELETE FROM "grades"
+          WHERE "gradeId" = $1
+    RETURNING *;
+  `;
+  const params = [gradeId];
+
+  db.query(sql, params)
+    .then(data => {
+      const [grade] = data.rows;
+      if (!grade) {
+        res.status(404).json({ error: `Cannot find grade with gradeId: ${gradeId}` });
+        return;
+      }
+
+      res.status(204).json(grade);
+    })
+    .catch(err => {
+      // eslint-disable-next-line no-console
+      console.log('Delete grade error', err);
+      res.status(500).json({ error: 'An unexpected error occurred' });
+    });
 });
 
 app.listen(3000, () => {
