@@ -73,10 +73,19 @@ app.put('/api/grades/:gradeId', (req, res) => {
   const { course, name, score } = req.body;
 
   if (gradeId < 1) {
-    res.status(400).json({ error: 'gradeId is invalid' });
+    res.status(400).json({ error: `gradeId: ${gradeId} is invalid` });
     return;
-  } else if (!name || !course || !score) {
-    res.status(400).json({ error: 'Invalid name, course, or score' });
+  } else if (!name) {
+    res.status(400).json({ error: 'Invalid name' });
+    return;
+  } else if (!course) {
+    res.status(400).json({ error: 'Invalid course' });
+    return;
+  } else if (!score) {
+    res.status(400).json({ error: 'Invalid score' });
+    return;
+  } else if (score < 0 || score > 100) {
+    res.status(400).json({ error: 'Score must be an integer from 0 to 100' });
     return;
   }
 
@@ -92,14 +101,15 @@ app.put('/api/grades/:gradeId', (req, res) => {
 
   db.query(sql, params)
     .then(data => {
-      const grade = data.rows[gradeId];
-
+      const grade = data.rows;
       if (!grade) {
         res.status(404).json({ error: `Cannot find grade with gradeId: ${gradeId}` });
+        return;
       }
       res.json(grade);
     })
     .catch(err => {
+      // eslint-disable-next-line no-console
       console.log('Put grades error:', err);
       res.status(500).json({ Error: 'An unexpected error occurred' });
     });
