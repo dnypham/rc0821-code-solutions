@@ -20,3 +20,7 @@ const traits = [
 const sum = numbers.reduce((previousNumber, currentNumber) => previousNumber + currentNumber);
 
 console.log('Sum of all numbers:', sum);
+
+const product = numbers.reduce((previousNumber, currentNumber) => previousNumber * currentNumber);
+
+console.log('Product of all numbers:', product);
