@@ -26,8 +26,8 @@ const overFive = numbers.filter(number => number > 5);
 
 console.log(overFive);
 
-const startWithE = names.filter(word => {
-  if (word.startsWith('E')) {
+const startWithE = names.filter(name => {
+  if (name.startsWith('E')) {
     return true;
   } else {
     return false;
@@ -35,3 +35,13 @@ const startWithE = names.filter(word => {
 });
 
 console.log(startWithE);
+
+const haveD = names.filter(name => {
+  if (name.includes('D') || name.includes('d')) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+console.log(haveD);
