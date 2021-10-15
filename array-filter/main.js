@@ -25,3 +25,13 @@ console.log(evenNumbers);
 const overFive = numbers.filter(number => number > 5);
 
 console.log(overFive);
+
+const startWithE = names.filter(word => {
+  if (word.startsWith('E')) {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+console.log(startWithE);
