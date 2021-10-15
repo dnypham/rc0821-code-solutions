@@ -21,3 +21,7 @@ const evenNumbers = numbers.filter(number => {
 });
 
 console.log(evenNumbers);
+
+const overFive = numbers.filter(number => number > 5);
+
+console.log(overFive);
