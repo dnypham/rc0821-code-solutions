@@ -72,7 +72,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
   const gradeId = parseInt(req.params.gradeId);
   const { course, name, score } = req.body;
 
-  if (gradeId < 1) {
+  if (gradeId < 1 || !Number.isInteger(gradeId)) {
     res.status(400).json({ error: `gradeId: ${gradeId} is invalid` });
     return;
   } else if (!name) {
@@ -120,8 +120,9 @@ app.put('/api/grades/:gradeId', (req, res) => {
 app.delete('/api/grades/:gradeId', (req, res) => {
   const gradeId = parseInt(req.params.gradeId);
 
-  if (gradeId < 1) {
+  if (gradeId < 1 || !Number.isInteger(gradeId)) {
     res.status(400).json({ error: `gradeId: ${gradeId} is invalid` });
+    return;
   }
 
   const sql = `
