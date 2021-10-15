@@ -11,3 +11,7 @@ const languages = [
 const doubled = numbers.map(number => number * 2);
 
 console.log(doubled);
+
+const prices = numbers.map(number => `$${number.toFixed(2)}`);
+
+console.log(prices);
