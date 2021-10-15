@@ -33,4 +33,8 @@ const balance = account.reduce((previousTransaction, currentTransaction) => {
   }
 }, 0);
 
-console.log(balance);
+console.log('Balance:', balance);
+
+const composite = traits.reduce((previousTrait, currentTrait) => Object.assign(previousTrait, currentTrait));
+
+console.log('Composite:', composite);
