@@ -24,3 +24,13 @@ console.log('Sum of all numbers:', sum);
 const product = numbers.reduce((previousNumber, currentNumber) => previousNumber * currentNumber);
 
 console.log('Product of all numbers:', product);
+
+const balance = account.reduce((previousTransaction, currentTransaction) => {
+  if (currentTransaction.type === 'deposit') {
+    return previousTransaction + currentTransaction.amount;
+  } else {
+    return previousTransaction - currentTransaction.amount;
+  }
+}, 0);
+
+console.log(balance);
