@@ -1,18 +1,18 @@
 /* exported reverseWords */
 
 function reverseWords(string) {
-  const test = string.split(' ');
-  console.log(test);
-  const test2 = [];
+  const stringArray = string.split(' ');
 
-  for (let i = 0; i < test.length; i++) {
-    const test1 = test[i].split();
-    test1.reverse();
-    test1.join();
-    test2.push(test1);
+  const wordsArray = [];
+
+  for (let i = 0; i < stringArray.length; i++) {
+    const lettersArray = stringArray[i].split('');
+    lettersArray.reverse();
+    const reversedWord = lettersArray.join('');
+    wordsArray.push(reversedWord);
   }
 
-  test2.reverse();
-  test2.join(' ');
-  console.log(test2);
+  const newString = wordsArray.join(' ');
+
+  return newString;
 }
