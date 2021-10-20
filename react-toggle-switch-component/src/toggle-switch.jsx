@@ -6,4 +6,8 @@ class ToggleSwitch extends React.Component {
     this.state = { toggle: false };
     this.handleClick = this.handleClick.bind(this);
   }
+
+  handleClick() {
+    this.setState({ toggle: !this.state.toggle });
+  }
 }
