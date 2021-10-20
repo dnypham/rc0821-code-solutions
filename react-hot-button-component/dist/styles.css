@@ -1,0 +1,43 @@
+.btn {
+  border: 2px solid black;
+  width: 100px;
+  height: 50px;
+  box-shadow: 6px 5px 2px black;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.btn-0 {
+  color: white;
+  background-color: gray;
+}
+
+.btn-3 {
+  color: white;
+  background-color: #2b1f65;
+}
+
+.btn-6 {
+  color: white;
+  background-color: #584998;
+}
+
+.btn-9 {
+  color: white;
+  background-color: #d1635e;
+}
+
+.btn-12 {
+  color: black;
+  background-color: #eeab6a;
+}
+
+.btn-15 {
+  color: black;
+  background-color: #fffc48;
+}
+
+.btn-18 {
+  color: black;
+  background-color: #fff;
+}
