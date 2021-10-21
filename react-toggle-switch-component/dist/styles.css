@@ -1,0 +1,51 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle {
+  width: 70px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 20px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.toggle-off {
+  background-color: lightgray;
+}
+
+.toggle-on {
+  background-color: forestgreen;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid black;
+  border-radius: 20px;
+  position: relative;
+  background-color: white;
+}
+
+.circle-off {
+  left: -1px;
+  top: -2px;
+}
+
+.circle-on {
+  right: -37px;
+  top: -2px;
+}
+
+.label {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 20px;
+}
