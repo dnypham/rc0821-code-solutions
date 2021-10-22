@@ -13,7 +13,7 @@ class PokemonList extends React.Component {
     ];
 
     const listItems = pokedex.map(pokemon =>
-      <li key={pokemon.number} value={pokemon}>{pokemon.name}</li>
+      <li key={pokemon.number}>{pokemon.name}</li>
     );
 
     return listItems;
