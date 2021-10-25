@@ -19,7 +19,7 @@ class ValidatedInput extends React.Component {
   getIconColor() {
     const password = this.state.password;
 
-    if (password.length < 8 || !password.includes('!')) {
+    if (password.length < 8) {
       return 'i-invalid';
     } else {
       return 'i-valid';
@@ -29,7 +29,7 @@ class ValidatedInput extends React.Component {
   getIcon() {
     const password = this.state.password;
 
-    if (password.length < 8 || !password.includes('!')) {
+    if (password.length < 8) {
       return 'fas fa-times';
     } else {
       return 'fas fa-check';
@@ -43,15 +43,12 @@ class ValidatedInput extends React.Component {
       return 'A password is required.';
     } else if (password.length < 8) {
       return 'Your password is too short.';
-    } else if (password.includes('!') || password.includes('@') || password.includes('?')) {
-      return '';
     } else {
-      return 'Your password needs to include a special character. (!, @, ?)';
+      return '';
     }
   }
 
   render() {
-    console.log(this.state.password);
 
     return (
       <label>
