@@ -79,6 +79,34 @@ export default class App extends React.Component {
      * And specify the "Content-Type" header as "application/json"
      */
 
+    const todoIndex = this.state.todos.findIndex(todo => { return todo.todoId === todoId; });
+    const status = this.state.todos[todoIndex].isCompleted;
+
+    const toggle = {
+      isCompleted: !status
+    };
+
+    fetch(`/api/todos/${todoId}`, {
+      method: 'PATCH',
+      body: JSON.stringify(toggle),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(request => request.json())
+      .then(data => {
+        const newTodos = this.state.todos.map((element, index) => {
+          if (index === todoIndex) {
+            return data;
+          } else {
+            return element;
+          }
+        });
+
+        this.setState({
+          todos: newTodos
+        });
+      });
   }
 
   render() {
