@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.lato-400 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.lato-300 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.padding-left-20 {
+  padding-left: 20px;
+}
+
+.menu-icon-container {
+  position: absolute;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 30px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgb(38 57 77) 5px 10px 30px -10px;
+}
+
+.menu-icon {
+  color: black;
+  font-size: 26px;
+}
+
+.app-drawer-container {
+  background-color: rgba(105, 105, 105, 0.8);
+  height: 100%;
+  width: 100%;
+}
+
+.app-drawer {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
+  height: 100%;
+  width: 300px;
+  padding-top: 40px;
+  transition: 0.5s ease-in-out;
+}
+
+.app-drawer > h3 {
+  font-size: 22px;
+}
+
+.view {
+  left: 0;
+}
+
+.app-drawer-option {
+  font-size: 18px;
+  cursor: pointer;
+  height: 50px;
+  border: none;
+  background-color: white;
+  text-align: left;
+  transition: 0.2s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+.switch {
+  background-image: url(../images/nintendo-switch.png);
+}
+
+.zelda {
+  background-image: url(../images/breath-of-the-wild.jpeg);
+}
+
+.pokemon {
+  background-image: url(../images/pokemon-legends-arceus.png);
+}
+
+.animal {
+  background-image: url(../images/animal-crossing.jpeg);
+}
+
+.smash {
+  background-image: url(../images/smash-bros-ultimate.png);
+}
+
+.kart {
+  background-image: url(../images/mario-kart.jpeg);
+}
+
+.menu-icon-container:hover {
+  background-color: lightgrey;
+}
+
+.app-drawer-option:hover {
+  background-color: lightgray;
+}
