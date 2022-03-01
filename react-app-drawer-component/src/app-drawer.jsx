@@ -44,7 +44,7 @@ export default class AppDrawer extends React.Component {
   getOverlay() {
     if (this.state.toggle) {
       return (
-        <div className='app-drawer-container'></div>
+        <div className='app-drawer-container' onClick={() => this.setState({ toggle: false })}></div>
       );
     }
   }
