@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+}
+
+.topic-container {
+  margin: 300px auto;
+}
+
+.topic-button {
+  cursor: pointer;
+  font-size: 32px;
+  height: 70px;
+  width: 500px;
+  text-align: left;
+  background-color: lightgrey;
+  border: 2px solid black;
+  margin-bottom: 2px;
+  padding: 0 15px;
+}
+
+.topic-text-container {
+  border: 2px solid black;
+  background-color: white;
+  padding: 10px;
+  width: 500px;
+  margin-bottom: 5px;
+}
+
+.lato-400 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+.lato-300 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
+.hidden {
+  display: none;
+}
+
+.topic-button:hover {
+  filter: brightness(105%);
+}
