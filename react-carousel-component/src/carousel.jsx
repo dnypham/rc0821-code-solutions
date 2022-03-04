@@ -10,6 +10,19 @@ export default class Carousel extends React.Component {
   }
 
   componentDidMount() {
+    this.setInterval();
+  }
+
+  componentDidUpdate() {
+    clearInterval(this.id);
+    this.setInterval();
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.id);
+  }
+
+  setInterval() {
     this.id = setInterval(() => {
       if (this.state.id === this.props.pokemon.length) {
         this.setState({ id: 1 });
@@ -17,10 +30,6 @@ export default class Carousel extends React.Component {
         this.setState({ id: this.state.id + 1 });
       }
     }, 3000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.id);
   }
 
   renderIcons() {
