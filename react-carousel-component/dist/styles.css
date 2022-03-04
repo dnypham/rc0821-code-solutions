@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+.lato-400 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
 .container {
   height: 100vh;
   width: 100vw;
@@ -34,6 +39,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.pokemon-name {
+  color: black;
 }
 
 .image {

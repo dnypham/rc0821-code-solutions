@@ -35,6 +35,12 @@ export default class Carousel extends React.Component {
     return pokemon.image;
   }
 
+  getName() {
+    const [pokemon] = this.props.pokemon.filter(pokemon => this.state.id === pokemon.id);
+
+    return pokemon.name;
+  }
+
   arrowBack(id) {
     id === 1
       ? this.setState({ id: 5 })
@@ -55,6 +61,7 @@ export default class Carousel extends React.Component {
             <i className="fa-solid fa-circle-arrow-left fa-2x icons" onClick={() => this.arrowBack(this.state.id)}></i>
           </div>
           <div className='image-container'>
+            <h1 className='pokemon-name lato-400'>{this.getName()}</h1>
             <img className='image' src={this.getImage()}></img>
             <div className='dot-container'>
               {this.renderIcons()}
