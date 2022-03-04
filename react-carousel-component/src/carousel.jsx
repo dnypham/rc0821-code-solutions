@@ -10,19 +10,17 @@ export default class Carousel extends React.Component {
   }
 
   componentDidMount() {
-    clearInterval(this.carousel);
-  }
-
-  timer() {
-    clearInterval(this.carousel);
-
-    this.carousel = setInterval(() => {
+    this.id = setInterval(() => {
       if (this.state.id === this.props.pokemon.length) {
         this.setState({ id: 1 });
       } else {
         this.setState({ id: this.state.id + 1 });
       }
     }, 3000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.id);
   }
 
   renderIcons() {
@@ -32,27 +30,21 @@ export default class Carousel extends React.Component {
   }
 
   getImage() {
-    this.timer();
-
     const [pokemon] = this.props.pokemon.filter(pokemon => this.state.id === pokemon.id);
 
     return pokemon.image;
   }
 
   arrowBack(id) {
-    if (id === 1) {
-      this.setState({ id: 5 });
-    } else {
-      this.setState({ id: id - 1 });
-    }
+    id === 1
+      ? this.setState({ id: 5 })
+      : this.setState({ id: id - 1 });
   }
 
   arrowForward(id) {
-    if (id === this.props.pokemon.length) {
-      this.setState({ id: 1 });
-    } else {
-      this.setState({ id: id + 1 });
-    }
+    id === this.props.pokemon.length
+      ? this.setState({ id: 1 })
+      : this.setState({ id: id + 1 });
   }
 
   render() {
