@@ -1,59 +1,48 @@
 /* exported titleCase */
 
 function titleCase(title) {
-  const array1 = title.split(' ');
+  // Lowercase the title
+  // Split string into an array by spaces to separate the words.
+  // Loop through each word
+  // (1) If the word is 'JavaScript' or 'API' special case.
+  // (2) If the word is at index 0, capitalize the first letter and lowercase the rest.
+  // (3) If the word length is at least 4, capitalize the first letter and lowercase the rest.
+  // (4) Else, lowercase all the letters.
+  const minorWordsArray = ['and', 'or', 'but', 'a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'];
+  const lowTitle = title.toLowerCase();
+  const titleArray = lowTitle.split(' ');
+  const APATitleArray = titleArray.map((word, index) => {
+    if (word.includes(':')) {
+      const revisedWord = word.replace(':', '');
 
-  const solution = array1.map((word, index) => {
-
-    if ((!word.includes('-')) && (!word.includes(':')) && (index !== 0) && (word === 'in' || word === 'and' || word === 'or' || word === 'nor' || word === 'but' || word === 'a' || word === 'an' || word === 'the' || word === 'as' || word === 'at' || word === 'by' || word === 'for' || word === 'of' || word === 'on' || word === 'per' || word === 'to')) {
-      return word;
-    } else if ((!word.includes('-')) && (!word.includes(':')) && (word === 'javascript' || word === 'JavaScript')) {
-      return 'JavaScript';
-    } else if ((!word.includes('-')) && (!word.includes(':')) && (word === 'api' || word === 'API')) {
-      return 'API';
-    } else if (word.includes('-')) {
-      const hyphenArray = word.split('-');
-      const test1 = hyphenArray.map((word, index) => {
-
-        const lettersArray = word.split('');
-
-        const solution2 = lettersArray.map((letter, index) => {
-
-          if (index === 0) {
-            return letter.toUpperCase();
-          } else {
-            return letter.toLowerCase();
-          }
-        });
-
-        console.log(solution2);
-        const test2 = solution2.join('');
-        console.log(test2);
-        return test2;
-      });
-      console.log(test1);
-      test1.splice(1, 0, '-');
-      console.log(test1);
-      return test1.join('');
-
-    }
-
-    const lettersArray = word.split('');
-
-    const solution2 = lettersArray.map((letter, index) => {
-
-      if (index === 0) {
-        return letter.toUpperCase();
+      if (revisedWord === 'javascript') {
+        return 'JavaScript' + ':';
+      } else if (revisedWord === 'api') {
+        return 'API' + ':';
       } else {
-        return letter.toLowerCase();
+        return word[0].toUpperCase() + word.slice(1);
       }
-    });
 
-    return solution2.join('');
+    } else if (word.includes('-')) {
+      const wordArray = word.split('-');
+      const revisedWordArray = wordArray.map(word => {
+        return word[0].toUpperCase() + word.slice(1);
+      });
+
+      return revisedWordArray.join('-');
+    } else if (word === 'javascript') {
+      return 'JavaScript';
+    } else if (word === 'api') {
+      return 'API';
+    } else if (index === 0 || word.length >= 4 || titleArray[index - 1].includes(':')) {
+      return word[0].toUpperCase() + word.slice(1);
+    } else if (!minorWordsArray.includes(word)) {
+      return word[0].toUpperCase() + word.slice(1);
+    } else {
+      return word;
+    }
   });
 
-  const solution3 = solution.join(' ');
-  console.log(solution3);
-  return solution3;
-
+  const APATitle = APATitleArray.join(' ');
+  return APATitle;
 }
