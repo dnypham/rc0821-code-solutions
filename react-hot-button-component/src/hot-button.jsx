@@ -34,7 +34,9 @@ class HotButton extends React.Component {
   render() {
 
     return (
-      <button className={`btn ${this.getColor()}`} onClick={this.handleClick}>Hot Button</button>
+      <div className='button-container'>
+        <button className={`btn ${this.getColor()}`} onClick={this.handleClick}>Hot Button</button>
+      </div>
     );
   }
 
