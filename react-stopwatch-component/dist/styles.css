@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 #root {
   font-family: 'Orbitron', sans-serif;
   width: 100vw;
