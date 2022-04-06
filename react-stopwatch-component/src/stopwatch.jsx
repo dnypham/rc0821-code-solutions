@@ -1,64 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-class Stopwatch extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      toggle: false,
-      seconds: 0
-    };
-    this.handleToggle = this.handleToggle.bind(this);
-    this.handleReset = this.handleReset.bind(this);
-  }
+export default function Stopwatch() {
+  const [toggle, setToggle] = useState(false);
+  const [count, setCount] = useState(0);
+  const [intervalId, setIntervalId] = useState(0);
 
-  handleToggle() {
-
-    if (!this.state.toggle) {
-      this.setState({ toggle: true });
-      this.time = setInterval(() => {
-        this.setState({ seconds: this.state.seconds + 1 });
-      }, 1000);
-    } else {
-      this.setState({ toggle: false });
-      clearInterval(this.time);
+  const handleClick = () => {
+    if (intervalId) {
+      setToggle(false);
+      clearInterval(intervalId);
+      setIntervalId(0);
+      return;
     }
-  }
 
-  handleReset() {
-    if (!this.state.toggle) {
-      this.setState({ seconds: 0 });
-    }
-  }
+    setToggle(true);
 
-  toggle() {
-    const toggle = this.state.toggle;
+    const time = setInterval(() => {
+      setCount(previousCount => previousCount + 1);
+    }, 1000);
 
-    return (!toggle ? 'fas fa-play fa-3x' : 'fas fa-pause fa-3x');
-  }
+    setIntervalId(time);
 
-  seconds() {
-    const seconds = this.state.seconds;
+  };
 
-    return seconds;
-  }
+  const handleReset = () => {
+    if (!toggle) setCount(0);
+  };
 
-  render() {
-
-    return (
-      <div className="stopwatch-container">
-        <div className="row">
-          <div className="column">
-            <div className="circle" onClick={this.handleReset}>
-              <h1 className="time noselect">{this.seconds()}</h1>
-            </div>
-            <div className="icon">
-              <i className={this.toggle()} onClick={this.handleToggle}></i>
-            </div>
+  return (
+    <div className="stopwatch-container">
+      <div className="row">
+        <div className="column">
+          <div className="circle" onClick={() => handleReset()}>
+            <h1 className="time noselect">{count}</h1>
+          </div>
+          <div className="icon">
+            <i className={toggle ? 'fas fa-pause fa-3x' : 'fas fa-play fa-3x'} onClick={() => handleClick()}></i>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
-
-export default Stopwatch;
